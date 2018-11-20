@@ -21,19 +21,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Registrar la celda ya que la configuramos con un XIB y no gráficamente desde el storyboard
+        self.tableView.register(UINib(nibName: "Cell", bundle: nil), forCellReuseIdentifier: "MessageCellID")
     }
     
     
     @IBAction func btnLogOut(_ sender: UIBarButtonItem) {
         
         do{
-           
+            // Cerrar sesión en Firebase
             try Auth.auth().signOut()
             
         }catch{
             print(error.localizedDescription)
         }
         
+        // Regresar al ViewController padre
         guard navigationController?.popToRootViewController(animated: true) != nil else{
             return
         }
@@ -41,6 +45,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
 
     @IBAction func btnSend(_ sender: UIButton) {
+        
+        
     }
     
     
@@ -56,17 +62,21 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     // MARK: UITableViewDataSource
-    let message = ["Primer mensaje", "Segundo mensaje", "Tercer mensaje"]
+    let messages = ["Primer mensaje", "Segundo mensaje", "Tercer mensaje"]
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return message.count
+        return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: <#T##IndexPath#>)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCellID", for: indexPath) as! Cell
+        
+        cell.textMessage.text = messages[indexPath.row]
+        
+        return cell
     }
     
     
