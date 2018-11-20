@@ -7,13 +7,41 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
+    
+    
+    @IBOutlet weak var txtFieldEmail: UITextField!
+    
+    @IBOutlet weak var txtFieldPassword: UITextField!
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    @IBAction func btnLogin(_ sender: UIButton) {
+        
+        if let email = txtFieldEmail.text, let password = txtFieldPassword.text{
+            
+            Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                
+                if error != nil{
+                    // Hubo error en el inicio de sesión
+                    print(error!)
+                }else{
+                    print("Inicio de sesión CORRECTO")
+                    self.performSegue(withIdentifier: "loginToChat", sender: self)
+                }
+            }
+        }
     }
     
 

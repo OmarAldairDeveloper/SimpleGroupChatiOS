@@ -108,7 +108,7 @@
                                                 <rect key="frame" x="0.0" y="70" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJW-bl-C24">
                                                 <rect key="frame" x="0.0" y="140" width="343" height="45"/>
@@ -119,6 +119,9 @@
                                                 <state key="normal" title="Registrarme">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btnRegister:" destination="P9V-Fh-JFS" eventType="touchUpInside" id="dAv-lw-gh2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -143,6 +146,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Registrarme" id="TzS-u1-OF7"/>
                     <connections>
+                        <outlet property="txtFieldEmail" destination="ffH-cm-qga" id="Qsy-57-D4E"/>
+                        <outlet property="txtFieldPassword" destination="fig-TY-aRV" id="my0-YJ-PVR"/>
                         <segue destination="66u-Yh-vOl" kind="show" identifier="registerToChat" id="aWk-21-twt"/>
                     </connections>
                 </viewController>
@@ -174,7 +179,7 @@
                                                 <rect key="frame" x="0.0" y="70" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SI6-28-f2N">
                                                 <rect key="frame" x="0.0" y="140" width="343" height="45"/>
@@ -185,6 +190,9 @@
                                                 <state key="normal" title="Iniciar sesión">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btnLogin:" destination="7Rx-8q-QCr" eventType="touchUpInside" id="ic0-fz-6qM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -209,6 +217,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Iniciar sesión" id="Ev8-Jm-rfQ"/>
                     <connections>
+                        <outlet property="txtFieldEmail" destination="I6r-1v-IeR" id="Dh8-OD-sl6"/>
+                        <outlet property="txtFieldPassword" destination="WYa-1H-tNe" id="CKE-PI-vhh"/>
                         <segue destination="66u-Yh-vOl" kind="show" identifier="loginToChat" id="uri-SV-aGb"/>
                     </connections>
                 </viewController>
@@ -278,7 +288,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qmx-K9-hdX"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat" id="MRj-2I-m06"/>
+                    <navigationItem key="navigationItem" title="Chat" id="MRj-2I-m06">
+                        <barButtonItem key="rightBarButtonItem" title="Salir" id="5Hl-MF-wWY"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCp-WW-Pm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,6 +316,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aWk-21-twt"/>
+        <segue reference="uri-SV-aGb"/>
     </inferredMetricsTieBreakers>
 </document>
