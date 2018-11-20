@@ -248,6 +248,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="66u-Yh-vOl" id="DsR-tY-ELn"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cm-TW-bun">
                                                 <rect key="frame" x="280" y="0.0" width="71" height="40"/>
@@ -267,10 +270,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.27914637327194214" green="0.25129503011703491" blue="0.2260032594203949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="COV-tl-8He" firstAttribute="top" secondItem="JIc-KS-aC2" secondAttribute="top" constant="30" id="8F3-Zc-7ER"/>
                                     <constraint firstAttribute="height" constant="100" id="DNV-5y-PIN"/>
                                     <constraint firstItem="COV-tl-8He" firstAttribute="centerX" secondItem="JIc-KS-aC2" secondAttribute="centerX" id="Hbj-8k-aPc"/>
                                     <constraint firstItem="COV-tl-8He" firstAttribute="leading" secondItem="JIc-KS-aC2" secondAttribute="leading" constant="12" id="PO6-Ka-9oU"/>
-                                    <constraint firstItem="COV-tl-8He" firstAttribute="centerY" secondItem="JIc-KS-aC2" secondAttribute="centerY" id="eXl-Ga-oZs"/>
                                     <constraint firstAttribute="trailing" secondItem="COV-tl-8He" secondAttribute="trailing" constant="12" id="evo-fM-tdU"/>
                                 </constraints>
                             </view>
@@ -303,6 +306,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="heightConstraint" destination="DNV-5y-PIN" id="NYU-rO-u3K"/>
                         <outlet property="tableView" destination="dsa-3c-BH3" id="HTP-rf-Pgc"/>
                         <outlet property="txtFieldSend" destination="iUI-HG-f8a" id="a88-DN-ry1"/>
                     </connections>
