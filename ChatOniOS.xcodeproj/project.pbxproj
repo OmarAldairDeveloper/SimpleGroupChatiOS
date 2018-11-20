@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED01C8CC21A4CE8500479217 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01C8CB21A4CE8500479217 /* Message.swift */; };
 		EDD8417E21A4A03200CBC373 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8417C21A4A03100CBC373 /* Cell.swift */; };
 		EDD8417F21A4A03200CBC373 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD8417D21A4A03100CBC373 /* Cell.xib */; };
 		EDEDB6732196102100CB0978 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEDB6722196102100CB0978 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		1C051FF5D3FC7A90061940C0 /* Pods-ChatOniOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatOniOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatOniOS/Pods-ChatOniOS.release.xcconfig"; sourceTree = "<group>"; };
 		BAC8DDE07BDFD9167D6246BE /* Pods-ChatOniOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatOniOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatOniOS/Pods-ChatOniOS.debug.xcconfig"; sourceTree = "<group>"; };
+		ED01C8CB21A4CE8500479217 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		EDD8417C21A4A03100CBC373 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		EDD8417D21A4A03100CBC373 /* Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		EDEDB66F2196102100CB0978 /* ChatOniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatOniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 		EDEDB684219612B600CB0978 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ED01C8CB21A4CE8500479217 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				EDEDB68F21961E7F00CB0978 /* ChatViewController.swift in Sources */,
 				EDEDB68D21961E7100CB0978 /* RegisterViewController.swift in Sources */,
 				EDD8417E21A4A03200CBC373 /* Cell.swift in Sources */,
+				ED01C8CC21A4CE8500479217 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

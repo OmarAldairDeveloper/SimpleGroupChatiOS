@@ -62,19 +62,20 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     // MARK: UITableViewDataSource
-    let messages = ["Primer mensaje", "Segundo mensaje", "Tercer mensaje"]
+    var messagesArray : [Message] = [Message(), Message(), Message(), Message()]
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages.count
+        return messagesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCellID", for: indexPath) as! Cell
         
-        cell.textMessage.text = messages[indexPath.row]
+        cell.userMessage.text = messagesArray[indexPath.row].sender
+        cell.textMessage.text = messagesArray[indexPath.row].message
         
         return cell
     }

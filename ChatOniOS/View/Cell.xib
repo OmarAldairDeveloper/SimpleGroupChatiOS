@@ -29,14 +29,14 @@
                         <rect key="frame" x="43.5" y="2" width="274.5" height="39.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="kJ1-cW-0Bs">
-                                <rect key="frame" x="2" y="2" width="270.5" height="14"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="9"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="2" y="2" width="270.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="12"/>
+                                <color key="textColor" red="0.29005346380271391" green="0.31165042333295423" blue="0.31723905456852797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Mensaje" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="uvJ-dL-VTH">
-                                <rect key="frame" x="2" y="18" width="270.5" height="19.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <rect key="frame" x="2" y="20.5" width="270.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
