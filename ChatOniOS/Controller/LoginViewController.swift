@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
     
     
     @IBOutlet weak var txtFieldEmail: UITextField!
-    
     @IBOutlet weak var txtFieldPassword: UITextField!
     
     
@@ -35,13 +34,29 @@ class LoginViewController: UIViewController {
                 
                 if error != nil{
                     // Hubo error en el inicio de sesión
-                    print(error!)
+                    self.showAlert(title: "Error", message: "Hubo un error en el inicio de sesión")
                 }else{
-                    print("Inicio de sesión CORRECTO")
-                    self.performSegue(withIdentifier: "loginToChat", sender: self)
+                    // No hubo error
+                    let alert = UIAlertController(title: "Inicio correcto", message: "El inicio de sesión fué correcto", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .default, handler: { (_) in
+                        self.performSegue(withIdentifier: "loginToChat", sender: self)
+                    })
+                    
+                    alert.addAction(action)
+                    self.present(alert, animated: true, completion: nil)
+                    
                 }
             }
         }
+    }
+    
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
     }
     
 

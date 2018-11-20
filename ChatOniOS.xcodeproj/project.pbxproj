@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EDD8417E21A4A03200CBC373 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8417C21A4A03100CBC373 /* Cell.swift */; };
+		EDD8417F21A4A03200CBC373 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD8417D21A4A03100CBC373 /* Cell.xib */; };
 		EDEDB6732196102100CB0978 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEDB6722196102100CB0978 /* AppDelegate.swift */; };
 		EDEDB6752196102100CB0978 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEDB6742196102100CB0978 /* WelcomeViewController.swift */; };
 		EDEDB6782196102100CB0978 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDEDB6762196102100CB0978 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		1C051FF5D3FC7A90061940C0 /* Pods-ChatOniOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatOniOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatOniOS/Pods-ChatOniOS.release.xcconfig"; sourceTree = "<group>"; };
 		BAC8DDE07BDFD9167D6246BE /* Pods-ChatOniOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatOniOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatOniOS/Pods-ChatOniOS.debug.xcconfig"; sourceTree = "<group>"; };
+		EDD8417C21A4A03100CBC373 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		EDD8417D21A4A03100CBC373 /* Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		EDEDB66F2196102100CB0978 /* ChatOniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatOniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEDB6722196102100CB0978 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDEDB6742196102100CB0978 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				EDEDB6762196102100CB0978 /* Main.storyboard */,
 				EDEDB6792196102300CB0978 /* Assets.xcassets */,
 				EDEDB67B2196102300CB0978 /* LaunchScreen.storyboard */,
+				EDD8417C21A4A03100CBC373 /* Cell.swift */,
+				EDD8417D21A4A03100CBC373 /* Cell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDEDB67D2196102300CB0978 /* LaunchScreen.storyboard in Resources */,
+				EDD8417F21A4A03200CBC373 /* Cell.xib in Resources */,
 				EDEDB6892196137300CB0978 /* GoogleService-Info.plist in Resources */,
 				EDEDB67A2196102300CB0978 /* Assets.xcassets in Resources */,
 				EDEDB6782196102100CB0978 /* Main.storyboard in Resources */,
@@ -276,6 +283,7 @@
 				EDEDB6732196102100CB0978 /* AppDelegate.swift in Sources */,
 				EDEDB68F21961E7F00CB0978 /* ChatViewController.swift in Sources */,
 				EDEDB68D21961E7100CB0978 /* RegisterViewController.swift in Sources */,
+				EDD8417E21A4A03200CBC373 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

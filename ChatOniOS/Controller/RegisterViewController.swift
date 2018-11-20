@@ -28,18 +28,39 @@ class RegisterViewController: UIViewController {
         
         if let email = txtFieldEmail.text, let password = txtFieldPassword.text{
             
+            
             // Crear user en Firebase
             Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                 
                 if error != nil{
                     // Hubo un error
-                    print(error!)
+                    self.showAlert(title: "Error", message: "Hubo un error al crear cuenta de usuario")
+                    
+                    
                 }else{
-                    print("Creación correcta de usuario")
-                    self.performSegue(withIdentifier: "registerToChat", sender: self)
+                    
+                    let alert = UIAlertController(title: "Registro correcto", message: "Te has registrado de manera correcta", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .default, handler: { (_) in
+                        self.performSegue(withIdentifier: "registerToChat", sender: self)
+                    })
+                    
+                    alert.addAction(action)
+                    self.present(alert, animated: true, completion: nil)
+                    
+                    
                 }
             }
         }
+        
+    }
+    
+    
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
         
     }
     

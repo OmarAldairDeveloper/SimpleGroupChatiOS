@@ -258,6 +258,9 @@
                                                 <state key="normal" title="Enviar">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btnSend:" destination="66u-Yh-vOl" eventType="touchUpInside" id="dJv-fm-uyX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -274,6 +277,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dsa-3c-BH3">
                                 <rect key="frame" x="0.0" y="64" width="375" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="66u-Yh-vOl" id="MbE-pb-yQS"/>
+                                    <outlet property="delegate" destination="66u-Yh-vOl" id="tUf-PT-HEX"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -289,8 +296,16 @@
                         <viewLayoutGuide key="safeArea" id="Qmx-K9-hdX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="MRj-2I-m06">
-                        <barButtonItem key="rightBarButtonItem" title="Salir" id="5Hl-MF-wWY"/>
+                        <barButtonItem key="rightBarButtonItem" title="Salir" id="5Hl-MF-wWY">
+                            <connections>
+                                <action selector="btnLogOut:" destination="66u-Yh-vOl" id="6We-Nw-5rX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="dsa-3c-BH3" id="HTP-rf-Pgc"/>
+                        <outlet property="txtFieldSend" destination="iUI-HG-f8a" id="a88-DN-ry1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCp-WW-Pm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
