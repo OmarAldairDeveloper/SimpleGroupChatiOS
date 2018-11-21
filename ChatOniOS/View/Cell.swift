@@ -13,6 +13,7 @@ class Cell: UITableViewCell {
     @IBOutlet weak var imageMessage: UIImageView!
     @IBOutlet weak var userMessage: UILabel!
     @IBOutlet weak var textMessage: UILabel!
+    @IBOutlet weak var messageBackground: UIView!
     
     
     
