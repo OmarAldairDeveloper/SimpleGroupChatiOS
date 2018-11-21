@@ -15,6 +15,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var txtFieldSend: UITextField!
+    @IBOutlet weak var btnSendOutlet: UIButton!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     
@@ -26,6 +27,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         // Registrar la celda ya que la configuramos con un XIB y no gráficamente desde el storyboard
         self.tableView.register(UINib(nibName: "Cell", bundle: nil), forCellReuseIdentifier: "MessageCellID")
+        
+        self.tableView.separatorStyle = .none
+        self.configureTableView()
+        self.getMessageForFirebase()
     }
     
     
@@ -48,7 +53,66 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBAction func btnSend(_ sender: UIButton) {
         
+        // Cerrar el teclado
+        self.txtFieldSend.endEditing(true)
         
+        // Bloquear los elementos para no enviar mensajes duplicados
+        self.txtFieldSend.isEnabled = false
+        self.btnSendOutlet.isEnabled = false
+        
+        
+        // Referencia a la base de datos de Firebase
+        let dbReference = Database.database().reference().child("Messages")
+        
+        
+        // Diccionario para mandar datos a Firebase
+        let dict = ["sender" : Auth.auth().currentUser?.email, "message" : txtFieldSend.text]
+        
+        
+        // Mandar a la base de datos
+        dbReference.childByAutoId().setValue(dict) { (error, reference) in
+            
+            if error != nil{
+                // Hubo error
+                print(error!)
+            }else{
+                print("Mensaje guardado correctamente")
+                
+                self.txtFieldSend.isEnabled = true
+                self.btnSendOutlet.isEnabled = true
+                self.txtFieldSend.text = ""
+            }
+        }
+        
+        
+        
+    }
+    
+    
+    func getMessageForFirebase(){
+        
+        let dbReference = Database.database().reference().child("Messages")
+        
+        dbReference.observe(.childAdded) { (snapshot) in
+            
+            let snapValue = snapshot.value as! Dictionary<String, String>
+            
+            let sender = snapValue["sender"]!
+            let message = snapValue["message"]!
+            
+            let messageObject = Message(sender: sender, message: message)
+            self.messagesArray.append(messageObject)
+            
+            self.configureTableView()
+            self.tableView.reloadData()
+            
+        }
+    }
+    
+    func configureTableView(){
+        // F8unción para intentar que las celdas tengan un ancho de 120 y que sino se puede crear ese espacio, entonces ajustarla
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 120
     }
     
     
@@ -64,7 +128,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     // MARK: UITableViewDataSource
-    var messagesArray : [Message] = [Message(), Message(), Message(), Message()]
+    var messagesArray : [Message] = [Message]()
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

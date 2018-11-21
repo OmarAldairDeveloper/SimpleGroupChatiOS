@@ -306,6 +306,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnSendOutlet" destination="2Cm-TW-bun" id="ABX-UF-r0B"/>
                         <outlet property="heightConstraint" destination="DNV-5y-PIN" id="NYU-rO-u3K"/>
                         <outlet property="tableView" destination="dsa-3c-BH3" id="HTP-rf-Pgc"/>
                         <outlet property="txtFieldSend" destination="iUI-HG-f8a" id="a88-DN-ry1"/>
