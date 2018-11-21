@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class RegisterViewController: UIViewController {
     
@@ -28,6 +29,7 @@ class RegisterViewController: UIViewController {
         
         if let email = txtFieldEmail.text, let password = txtFieldPassword.text{
             
+            SVProgressHUD.show()
             
             // Crear user en Firebase
             Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
@@ -39,6 +41,7 @@ class RegisterViewController: UIViewController {
                     
                 }else{
                     
+                    SVProgressHUD.dismiss()
                     let alert = UIAlertController(title: "Registro correcto", message: "Te has registrado de manera correcta", preferredStyle: .alert)
                     let action = UIAlertAction(title: "OK", style: .default, handler: { (_) in
                         self.performSegue(withIdentifier: "registerToChat", sender: self)
