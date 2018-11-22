@@ -237,11 +237,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIc-KS-aC2">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="COV-tl-8He">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="COV-tl-8He">
                                         <rect key="frame" x="12" y="30" width="351" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribe tu mensaje aquí" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iUI-HG-f8a">
-                                                <rect key="frame" x="0.0" y="0.0" width="268" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="269" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="c8h-2n-MDQ"/>
                                                 </constraints>
@@ -253,10 +253,11 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cm-TW-bun">
-                                                <rect key="frame" x="280" y="0.0" width="71" height="40"/>
+                                                <rect key="frame" x="281" y="0.0" width="70" height="40"/>
                                                 <color key="backgroundColor" red="0.63457126639999994" green="0.57054299230000005" blue="0.514902423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="cOM-hc-CYG"/>
+                                                    <constraint firstAttribute="width" constant="70" id="iA4-8S-sNi"/>
                                                 </constraints>
                                                 <state key="normal" title="Enviar">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
