@@ -77,6 +77,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Bienvenido" id="AKu-kS-Px8"/>
                     <connections>
+                        <outlet property="createAccountButton" destination="kbQ-g2-8qO" id="vJQ-3Z-gcW"/>
+                        <outlet property="loginButton" destination="wzR-QE-Kif" id="dHC-hR-MDh"/>
                         <segue destination="66u-Yh-vOl" kind="show" identifier="welcomeToChat" id="KBQ-0Q-4s2"/>
                     </connections>
                 </viewController>
@@ -337,6 +339,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uri-SV-aGb"/>
+        <segue reference="KBQ-0Q-4s2"/>
     </inferredMetricsTieBreakers>
 </document>
